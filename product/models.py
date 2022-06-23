@@ -15,7 +15,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_slug(self):
+    def get_absolute_url(self):
         return f'/{self.slug}/'
 
 
@@ -35,7 +35,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_slug(self):
+    def get_absolute_url(self):
         return f'/{self.category.slug}/{self.slug}/'
 
     def get_image(self):
