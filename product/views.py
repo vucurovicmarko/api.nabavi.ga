@@ -1,20 +1,21 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from . import models
-from . import serializers
-
-
-class LatestProductList(APIView):
-    def get(self, request, format=None):
-        products = models.Product.objects.all()[0:4]
-        serializer = serializers.ProductSerializer(products, many=True)
-
-        return Response(serializer.data)
+from .models import Category, Product
+from .serializers import CategorySerializer, ProductSerializer
 
 
 class CategoryList(APIView):
     def get(self, request, format=None):
-        categories = [category.name for category in models.Category.objects.all()]
+        categories = Category.objects.all()
+        serializer = CategorySerializer(categories, many=True)
 
-        return Response(categories)
+        return Response(serializer.data)
+
+
+class ProductList(APIView):
+    def get(self, request, format=None):
+        products = Product.objects.all()
+        serializer = ProductSerializer(products, many=True)
+
+        return Response(serializer.data)
