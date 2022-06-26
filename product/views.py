@@ -28,7 +28,10 @@ class CategoryProductList(APIView):
         products = Product.objects.filter(category__slug=category_slug)
         serializer = ProductSerializer(products, many=True)
 
-        return Response(serializer.data)
+        return Response({
+            'category': Category.objects.get(slug=category_slug).name,
+            'data': serializer.data
+        })
 
 
 class ProductDetail(APIView):
