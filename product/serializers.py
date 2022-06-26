@@ -20,6 +20,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'name',
             'description',
             'price',
+            'get_category',
             'get_absolute_url',
             'get_image',
             'get_thumbnail',
