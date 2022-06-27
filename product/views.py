@@ -23,15 +23,13 @@ class ProductList(APIView):
         return Response(serializer.data)
 
 
-class CategoryProductList(APIView):
+class CategoryDetail(APIView):
     def get(self, request, category_slug, format=None):
-        products = Product.objects.filter(category__slug=category_slug)
-        serializer = ProductSerializer(products, many=True)
 
-        return Response({
-            'category': Category.objects.get(slug=category_slug).name,
-            'data': serializer.data
-        })
+        category = get_object_or_404(Category, slug=category_slug)
+        serializer = CategorySerializer(category)
+
+        return Response(serializer.data)
 
 
 class ProductDetail(APIView):
