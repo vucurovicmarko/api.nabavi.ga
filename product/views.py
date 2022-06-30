@@ -43,8 +43,6 @@ class ProductDetail(APIView):
 
 @api_view(['POST'])
 def search(request):
-    print(request)
-    
     query = request.data.get('q', '')
 
     if query:
