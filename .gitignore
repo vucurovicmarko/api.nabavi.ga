@@ -216,6 +216,9 @@ fabric.properties
 # Upload files
 media/
 
+# Static files
+static/
+
 # VSCode
 .vscode/
 .vscode/*
