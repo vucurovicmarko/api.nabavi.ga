@@ -1,0 +1,15 @@
+[Unit]
+Description=uWSGI instance to serve api.nabavi.ga project
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/var/www/api.nabavi.ga/core
+Environment="PATH=/var/www/api.nabavi.ga/.venv/bin"
+ExecStart=/var/www/api.nabavi.ga/.venv/bin/uwsgi --ini /var/www/api.nabavi.ga/.venv/etc/uwsgi.ini
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
