@@ -54,6 +54,7 @@ INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8081",
     "http://127.0.0.1:8000",
+    "https://api.nabavi.ga",
 ]
 
 MIDDLEWARE = [
