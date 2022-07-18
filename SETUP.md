@@ -4,7 +4,7 @@ The following commands are execured for the first time if no python, venv or ngi
 
 ---
 
-START FIRST_TIME
+*START FIRST_TIME*
 
 ```
 apt update
@@ -30,7 +30,7 @@ Nginx setup
 apt install nginx
 ```
 
-END FIRST TIME
+*END FIRST TIME*
 
 ---
 
