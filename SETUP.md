@@ -46,7 +46,7 @@ cd api.nabavi.ga
 Create neccessary directories & files
 
 ```
-mkdir media && mkdir static && mkdir logs && mkdir -p .venv/var/run && mkdir -p .venv/etc && cp server/uwsgi.ini .venv/etc/uwsgi.ini
+mkdir media && mkdir static && mkdir -p .venv/var/run && mkdir -p .venv/etc && cp server/uwsgi.ini .venv/etc/uwsgi.ini
 ```
 
 Create virtual environment & install dependencies
