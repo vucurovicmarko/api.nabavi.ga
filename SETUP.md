@@ -56,6 +56,11 @@ python3 -m venv .venv
 
 pip install -r requirements.txt
 ```
+Run migrations
+
+```
+python manage.py migrate
+```
 
 Nginx configuration
 
