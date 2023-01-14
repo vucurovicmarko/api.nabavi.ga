@@ -4,7 +4,7 @@ The following commands are execured for the first time if no python, venv or ngi
 
 ---
 
-*START FIRST_TIME*
+_START FIRST_TIME_
 
 ```
 apt update
@@ -30,7 +30,7 @@ Nginx setup
 apt install nginx
 ```
 
-*END FIRST TIME*
+_END FIRST TIME_
 
 ---
 
@@ -50,12 +50,14 @@ mkdir media && mkdir static && mkdir -p .venv/var/run && mkdir -p .venv/etc && c
 ```
 
 Create virtual environment & install dependencies
+
 ```
 python3 -m venv .venv
 . .venv/bin/activate
 
 pip install -r requirements.txt
 ```
+
 Run migrations
 
 ```
@@ -90,3 +92,15 @@ Collect static files
 ```
 python manage.py collectstatic
 ```
+
+## Start local development server
+
+```
+. .venv/bin/activate
+python manage.py runserver
+```
+
+## Admin login
+
+user: marko
+pass: secret
